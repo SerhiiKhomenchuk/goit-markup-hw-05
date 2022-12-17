@@ -12,6 +12,7 @@ h5,
 h6,
 p {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Класс для обнуления базовых свойств у списков (ul) */
@@ -69,17 +70,19 @@ body {
 }
 
 .header {
-    border-bottom: 1px solid #ECECEC;
+    
      
 }
 .header-block {
     display: flex;
     align-items: center;
     height: 80px;
+    border-bottom: 1px solid #ECECEC;
     }
 
 .header-nav {
     display: flex;
+    
 }
 .logo {
     display: flex;
@@ -101,31 +104,54 @@ body {
 .logo-part {
 color: var(--color-logo);
 }
+.icon {
+    margin-right: 10px;
+}
 .link-nav {
+    position: relative;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-title);
-}
-.link-nav:hover, .link-nav:focus, .top-adress:hover, .top-adress:focus, .current {
-    color: var(--color-hoover);
-    fill: var(--color-hoover);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    padding: 31px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    }
 .header-adress {
     display: flex;
     align-items: center;
     margin-left: auto;
     gap: 30px;
+    
+    
 }
+.link-nav:hover, .link-nav:focus, .top-adress:hover, .top-adress:focus, .current {
+    color: var(--color-hoover);
+    fill: var(--color-hoover);
+    
+}
+.current::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--color-hoover);
+    border-radius: 2px;
+    bottom: 0;
+}
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    
+    
+    }
+
 .top-adress {
     display: flex;
     align-items: center;
@@ -135,23 +161,17 @@ color: var(--color-logo);
     line-height: 16px;
     letter-spacing: 0.02em;
     color: var(--color-textbase);
+    fill: var(--color-textbase);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
       
 }
-.icon {
- 
-    margin-right: 10px;
-}
-
-    
-    
-
 
     
 /*Main*/
 
 .hero {
-    max-width: 1600px;
+    width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -160,6 +180,7 @@ color: var(--color-logo);
     
     }
 .img-overlay {
+    max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), 
     rgba(47, 48, 58, 0.4)),
     url(../images/hero-img.webp);
@@ -207,6 +228,7 @@ color: var(--color-logo);
     
       
 }
+/*Особливості-Feautures*/
 
 .visually-hidden {
     width: 1px;
@@ -256,6 +278,8 @@ color: var(--color-logo);
     flex-direction: column;
 }
 
+/*Чим займаємось-What we do*/
+
 .what-we-do-title{
     font-weight: 700;
     font-size: 36px;
@@ -271,6 +295,27 @@ color: var(--color-logo);
     }
 .what-we-do {
     padding-top: 0px;
+}
+.what-we-do-lable {
+    position: relative;
+}
+.lable {
+    position: absolute;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display:flex;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 70px;
+    padding: auto;
+    z-index: 1;
 }
  
     /*Команда*/  
@@ -378,6 +423,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
     fill: var(--color-hoover);
     border: 1px solid var(--color-hoover);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: ;
     }
 
 /*Футер*/
@@ -410,9 +456,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
     color:var(--color-background);
     text-decoration: none;
 }
-.map:hover, .map:focus, .footer-adress:hover, .footer-adress:focus, .footer-social-link:hover, .footer-social-link:focus {
+.map:hover, .map:focus, .footer-adress:hover, .footer-adress:focus {
     color: var(--color-hoover);
-    transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .footer-adress {
@@ -459,8 +505,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
         fill: var(--color-background);
         background: rgba(255, 255, 255, 0.1);
 }
- {
+ .footer-social-link:hover,
+ .footer-social-link:focus {
     background-color: var(--color-hoover);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 .footer-social .social {
