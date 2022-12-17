@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <header class="header">
       <div class="container header-block">
         <nav class="header-nav">
@@ -75,7 +76,7 @@
       <section class="hero img-overlay">
         <div class="container hero-block">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -469,5 +470,15 @@
         </div>
       </div>
     </footer>
+    <!--Modal window - Модальне вікно-->
+    <div data-modal class="backdrop is-hidden" >
+      <div class="modal">
+        <button data-modal-close class="modal-button" type="button" >
+          <img src="./images/close.webp" alt="close" width="30" height="30"></use>
+                </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
