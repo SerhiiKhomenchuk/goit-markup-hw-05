@@ -377,13 +377,14 @@ color: var(--color-logo);
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    fill: var(--color-social-link);   
+    fill: var(--color-social-link);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .social-link:hover {
 background-color: var(--color-hoover);
 fill: var(--color-background);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /*Постійні клієнти-Clients*/
 .clients-block {
@@ -414,11 +415,12 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: var(--color-social-link);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon:hover {
     fill: var(--color-hoover);
     border: 1px solid var(--color-hoover);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
         }
 
 /*Футер*/
@@ -450,10 +452,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
     letter-spacing: 0.03em;
     color:var(--color-background);
     text-decoration: none;
+    transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .map:hover, .map:focus, .footer-adress:hover, .footer-adress:focus {
     color: var(--color-hoover);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
  
 .footer-adress {
@@ -466,6 +469,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
  
@@ -492,18 +496,19 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubi
 }
 .footer-social-link {
     display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        fill: var(--color-background);
-        background: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--color-background);
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  .footer-social-link:hover,
  .footer-social-link:focus {
     background-color: var(--color-hoover);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
         
 }
 .footer-social .social {
